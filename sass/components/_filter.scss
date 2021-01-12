@@ -1,0 +1,57 @@
+.filter {
+  padding-top: 2rem;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+    height: 10vh;
+
+    @include respond(phone){
+        flex-direction: column;
+        height:20vh;
+    }
+  }
+
+  &__search {
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+    border: none;
+    &__input {
+      padding: 1rem 3.5rem;
+      border: none;
+      border-radius: 0.5rem;
+
+      &.dark {
+        background-color: hsl(209, 23%, 22%);
+        color: $white-text;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    font-size: 1.5rem;
+    &.dark {
+      color: $white-text;
+    }
+  }
+
+  &__select {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+    border: none;
+    border-radius: 0.5rem;
+
+  }
+
+  &__continent {
+    padding: 1rem 2rem;
+
+    &.dark {
+      background-color: hsl(209, 23%, 22%);
+      color: $white-text;
+    }
+  }
+}

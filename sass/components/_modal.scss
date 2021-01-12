@@ -1,0 +1,84 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  display: none;
+
+  &.dark {
+    background-color: $body-dark-bg;
+    color: $white-text;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+  }
+
+  &__button {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background: transparent;
+    border: none;
+
+    &.dark {
+      color: $white-text;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+
+  &__name {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__population,
+  &__capital,
+  &__region,
+  &__subregion,
+  &__domain,
+  &__native__name,
+  &__languages,
+  &__currencies {
+    margin-bottom: 1.5rem;
+  }
+
+  // &__currencies{
+  //     font-size: 1.5rem;
+  // }
+
+  &__info__col2 {
+    font-size: 1.5rem;
+  }
+
+  &__info__col1 {
+    font-size: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  &__image {
+    width: 50rem;
+    height: 40rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon {
+    &.dark {
+      color: $white-text;
+    }
+  }
+}

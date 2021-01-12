@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Info</title>
+    <link rel="stylesheet" href="./dist/styles.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header theme">
+      <div class="header__container">
+        <div class="header__logo">
+          <h2 class="header__text">World Info</h2>
+        </div>
+        <div class="header__toggle">
+          <button class="header__button btn-toggle" id="toggle">Theme</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="filter">
+      <div class="filter__container">
+        <div class="filter__search">
+          <label class="filter__search__label">
+            <input
+              type="search"
+              placeholder="Search for a country ...."
+              id="search"
+              tabindex="0"
+              class="filter__search__input"
+            />
+            <i class="fas fa-search filter__icon"></i>
+          </label>
+        </div>
+        <div class="filter__select">
+          <select name="selectCont" class="filter__continent theme">
+            <label>Filter by Region</label>
+            <optgroup>
+              <option value="all" class="filter__select__option">All</option>
+              <option value="africa" class="filter__select__option">
+                Africa
+              </option>
+              <option value="americas" class="filter__select__option">
+                America
+              </option>
+              <option value="oceania" class="filter__select__option">
+                Oceania
+              </option>
+              <option value="asia" class="filter__select__option">Asia</option>
+              <option value="europe" class="filter__select__option">
+                Europe
+              </option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal" id="modal">
+      <div class="modal__container">
+        <button class="btn-close modal__button" id="close">
+          <i class="fas fa-times fa-2x modal__icon"></i>
+        </button>
+        <div class="modal__image"><img src="" alt="" class="modal__img" /></div>
+
+        <div class="modal__body"></div>
+      </div>
+    </section>
+
+    <section class="countries">
+      <div class="countries__container" id="countries"></div>
+    </section>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
